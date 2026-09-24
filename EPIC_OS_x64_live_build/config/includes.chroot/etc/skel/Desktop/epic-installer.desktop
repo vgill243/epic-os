@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Install EPIC OS
+Comment=Install EPIC OS to this computer
+Exec=/usr/local/bin/epic-installer
+Icon=system-software-install
+Terminal=false
+Categories=System;

@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# First-boot gaming setup: Steam, Wine, GameMode, MangoHud, Gamescope.
+# Needs internet. Packages missing on your Debian release are skipped.
+set -uo pipefail
+echo "== EPIC OS Gaming Setup =="
+sudo dpkg --add-architecture i386
+echo "deb http://deb.debian.org/debian trixie main contrib non-free non-free-firmware" | sudo tee /etc/apt/sources.list.d/epic-nonfree.list >/dev/null
+sudo apt-get update
+for p in steam-installer wine wine32 gamemode mangohud gamescope libvulkan1:i386 mesa-vulkan-drivers:i386; do
+  echo "-- installing $p"
+  sudo apt-get install -y "$p" || echo "   skipped $p"
+done
+echo "Done. Launch Steam from the app menu."
+read -rp "Press Enter to close..."

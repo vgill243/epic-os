@@ -1,0 +1,18 @@
+#!/bin/sh
+set -e
+cat > /usr/lib/os-release <<"OSR"
+PRETTY_NAME="EPIC OS x64 0.1 Developer"
+NAME="EPIC OS"
+VERSION_ID="0.1"
+VERSION="0.1 Developer"
+VERSION_CODENAME=trixie
+ID=epicos
+ID_LIKE=debian
+OSR
+ln -sf ../usr/lib/os-release /etc/os-release
+echo "EPIC OS x64 \\n \\l" > /etc/issue
+echo "EPIC OS" > /etc/issue.net
+for f in /etc/calamares/branding/*/branding.desc; do
+  [ -f "$f" ] && sed -i "s/Debian GNU\/Linux/EPIC OS/g; s/Debian/EPIC OS/g" "$f" || true
+done
+chmod +x /usr/local/bin/epic-installer /usr/local/bin/epic-gaming-setup

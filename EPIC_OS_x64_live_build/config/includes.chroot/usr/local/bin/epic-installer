@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Launches the Calamares graphical installer. Calamares shows the disk
+# chooser and requires confirmation before anything is erased.
+set -euo pipefail
+command -v calamares >/dev/null || { echo "Calamares is not installed in this image."; exit 1; }
+exec sudo -E calamares

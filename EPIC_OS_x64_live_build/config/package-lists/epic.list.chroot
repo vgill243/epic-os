@@ -1,0 +1,36 @@
+# Desktop
+task-xfce-desktop
+xfce4-goodies
+firefox-esr
+file-roller
+gparted
+# Installer
+calamares
+calamares-settings-debian
+# Network / audio / bluetooth
+network-manager
+network-manager-gnome
+pipewire
+pipewire-pulse
+wireplumber
+pavucontrol
+bluez
+blueman
+# Graphics / Vulkan
+mesa-vulkan-drivers
+vulkan-tools
+libgl1-mesa-dri
+# Firmware
+firmware-linux
+firmware-iwlwifi
+firmware-realtek
+firmware-atheros
+firmware-amd-graphics
+intel-microcode
+amd64-microcode
+# Tools
+sudo
+curl
+git
+nano
+htop

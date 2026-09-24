@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=EPIC Gaming Setup
+Comment=Install Steam, Wine, GameMode and MangoHud
+Exec=/usr/local/bin/epic-gaming-setup
+Icon=applications-games
+Terminal=true
+Categories=Game;System;
